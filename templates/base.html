@@ -38,8 +38,13 @@
                 </li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item active">
-                    <span class="badge text-bg-light" >{{request.user.username}}</span>
+                    <span class="badge text-bg-light" >{{request.user}}</span>
                 </li>
+
+                <li class="nav-item">
+                    <img src="{{request.user.user_profile.profile_image.url}}" style="height: 2rem;">
+                </li>
+
                 <li class="nav-item active">
                     <img src="{{request.user.user_profile.image.url}}" style="height: 2rem;">
                 </li>
